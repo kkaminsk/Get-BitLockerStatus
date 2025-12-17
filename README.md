@@ -153,6 +153,55 @@ Markers:
 - ZIP failure (empty/missing): `STEP: ZIP archive failed; reason='empty or missing zip'; file='<full path>'`
 - ZIP failure (exception): `STEP: ZIP archive failed; reason='exception'; error='<message>'`
 
+## Analysis with Jupyter Notebook
+
+The repository includes a Jupyter Notebook (`Analysis.ipynb`) for interactive analysis and visualization of collected diagnostic data.
+
+### Prerequisites
+
+- Python 3.8 or newer
+- pip (Python package manager)
+
+### Setup
+
+1. Create a virtual environment (recommended):
+   ```bash
+   python -m venv venv
+   # Windows
+   venv\Scripts\activate
+   # Linux/macOS
+   source venv/bin/activate
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Launch Jupyter:
+   ```bash
+   jupyter notebook Analysis.ipynb
+   ```
+
+### Using the Notebook
+
+1. Update the `DATA_DIR` variable in the Configuration cell to point to your collected logs folder (e.g., `BitLockerStatus-DD-MM-YYYY-HH-MM`).
+2. Run all cells (Cell > Run All) to generate the analysis report.
+
+### Features
+
+- **BitLocker Volume Status**: Parses `Get-BitLockerVolume.txt` into a tabular view
+- **MDM Policy Analysis**: Extracts BitLocker policies from MDM diagnostic reports
+- **Event Log Analysis**: Parses `.evtx` files for BitLocker and system events
+- **Timeline Visualization**: Charts event frequency over time
+- **Summary Report**: Consolidates findings from all data sources
+
+### Notes
+
+- The notebook gracefully handles missing files (e.g., if `-MDM` wasn't used during collection)
+- Event log parsing requires the `python-evtx` library
+- Visualizations require `matplotlib` and `seaborn`
+
 ## Privacy
 The output may include sensitive system information and logs. Share the resulting folder only with trusted parties for support or troubleshooting.
 
