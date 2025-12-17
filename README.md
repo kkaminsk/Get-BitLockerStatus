@@ -3,6 +3,8 @@
 ## Overview
 `Get-BitLockerStatus.ps1` gathers BitLocker configuration and diagnostic information from a Windows device and exports it into a timestamped folder. Use this when troubleshooting BitLocker encryption, TPM, Windows Recovery Environment (WinRE) issues, Group Policy BitLocker settings (FVE), and optionally MDM diagnostics.
 
+![](/Graphics/Get-BitLockerStatus.png)
+
 ## Requirements
 - PowerShell 5.1 or newer
 - Run in an elevated PowerShell session (Run as Administrator)
