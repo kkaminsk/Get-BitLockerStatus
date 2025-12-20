@@ -3,7 +3,16 @@
     "allow": [
       "Bash(git mv:*)",
       "Bash(mv:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(jupyter nbconvert:*)",
+      "Bash(pip install:*)",
+      "Bash(openspec list:*)",
+      "Bash(openspec archive add-jupyter-analysis:*)",
+      "Bash(openspec validate:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(pip show:*)"
     ],
     "deny": [],
     "ask": []
